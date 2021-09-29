@@ -18,7 +18,7 @@ function Bootstrapper() {
 
 
   useEffect(() => {
-    const newSocket = io(`ws://avidbot-task-server.herokuapp.com`);
+    const newSocket = io(`wss://avidbot-task-server.herokuapp.com`);
     setSocket(newSocket);
     return () => newSocket.close();
   }, [setSocket]);
