@@ -1,5 +1,85 @@
+:root{
+  --green: #00FF64;
+  --drak-green: #45B12C;
+  --blue: #0020C2;
+  --gray: #E9EBEF;
+
+}
+
+html, body {
+  background-color: var(--gray) !important;
+}
+
 .App {
   text-align: center;
+
+}
+
+.map-container{
+  position: relative;
+  background-color: gray;
+  max-width: 800px;
+  min-height: 40vh;
+  margin: auto;
+
+
+}
+
+#bot{
+  border-radius: 50%;
+  /* background-color: pink; */
+  background-image: url('./avidbot-black.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  transition: all .1s;
+  width: 20px;
+  height: 20px;
+  transform: translate(+30%, +25%);
+  /* color: wheat; */
+}
+
+#tilemap {
+  display: grid;
+  /* padding: 2em; */
+  min-height: 40vh;
+
+}
+
+#tilemap .tile{
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+}
+
+
+#tilemap .tile.vl-0{
+  background: white;
+  /* background: rgb(255,194,165); */
+/* background: radial-gradient(rgba(255,194,165,1) 0%, rgba(105,46,2,1) 100%); */
+transition: all .5s ease-in-out;
+border: 1px solid var(--gray);
+
+
+}
+
+#tilemap .tile.vl-1{
+  background-color: black;
+  /* background-image: url('./brickwall.svg'); */
+  color: white;
+  transition: all .5s ease-in-out;
+  border: 1px solid #333;
+  
+}
+
+#tilemap .tile.vl-2{
+  background: var(--green);
+  /* background: rgb(151,191,151); */
+  /* background: radial-gradient( rgba(151,191,151,1) 0%, rgba(18,159,5,1) 100%);  */
+  transition: all .5s ease-in-out;
+  border: 1px solid var(--drak-green);
+
 }
 
 .App-logo {
